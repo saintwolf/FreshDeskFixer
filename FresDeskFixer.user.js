@@ -4,6 +4,8 @@
 // @include     http://support.01t.co.uk/a/tickets/filters/new_and_my_open
 // @version     0.2
 // @grant       none
+// @downloadURL https://github.com/saintwolf/FreshDeskFixer/raw/master/FresDeskFixer.user.js
+// @updateURL   https://github.com/saintwolf/FreshDeskFixer/raw/master/FresDeskFixer.user.js
 // ==/UserScript==
 
 function main() {
