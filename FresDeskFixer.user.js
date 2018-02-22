@@ -6,21 +6,17 @@
 // @grant       none
 // ==/UserScript==
 
-function makeFixesHappen() {
-  console.log('FreshDeskFixer (makeFixesHappen): Doing the fixes now bossman!');
-  var responsive = document.getElementsByClassName('responsive')[0];
-  responsive.style = "width: 100%; max-width: 100%";
-}
-
 function main() {
-  // We need to implement an infinite loop and wait 1 second before running it again.
-  // This forces the size to change when dynamic elements change on the page.
-  while(true) {
-    setTimeout(makeFixesHappen, 1000);
+  console.log('FreshDeskFixer (makeFixesHappen): Doing the fixes now bossman!');
+
+  // First we have to make the entire table wider
+  if (document.getElementsByClassName('responsive').length > 0) {
+      var responsive = document.getElementsByClassName('responsive')[0];
+      responsive.style = "width: 100%; max-width: 100%";
   }
+
+  // This will re-run the function again 1 second after completion
+  setTimeout(main, 1000);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  // The main entry point into the application
-  main();
-}
+main();
